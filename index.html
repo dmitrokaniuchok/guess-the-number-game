@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Гра "Вгадай число"</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎯 Вгадай число</h1>
+      <p>Я загадав число від 1 до 100. Спробуй вгадати! 😎</p>
+
+      <form id="game-form">
+        <input type="number" id="game-input" min="1" max="100" required />
+        <button type="submit">Перевірити</button>
+      </form>
+
+      <p id="message"></p>
+      <p>Кількість спроб: <span id="attempts">0</span></p>
+      <p>Рекорд: <span id="record">–</span>🥇</p>
+      <button type="button" id="restart-btn">🔄 Грати ще</button>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  </body>
+</html>

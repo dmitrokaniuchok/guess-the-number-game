@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: rgba(255 255 255 / 0.1);
+  padding: 40px 48px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 18px;
+}
+
+form {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+input[type="number"] {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="number"]:focus {
+  box-shadow: 0 0 8px 3px #a3a0ff;
+}
+
+button {
+  padding: 0 24px;
+  background: #a29bfe;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #2d3436;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.15s ease;
+  user-select: none;
+}
+
+button:hover:not(:disabled) {
+  background-color: #6c5ce7;
+  color: white;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #b2bec3;
+  cursor: not-allowed;
+  color: #636e72;
+}
+
+#message {
+  font-size: 20px;
+  min-height: 20px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+#attempts,
+#record {
+  font-weight: 700;
+  color: #ffeaa7;
+}
+
+#restart-btn {
+  background: #00b894;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 15px rgba(0, 184, 148, 0.6);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#restart-btn:hover {
+  background-color: #019875;
+  box-shadow: 0 6px 20px rgba(0, 184, 148, 0.8);
+}
+
+#restart-btn:focus {
+  outline: none;
+  box-shadow: 0 0 10px 3px #00b894;
+}
+
+#restart-btn {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#restart-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
